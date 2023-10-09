@@ -1,12 +1,11 @@
 import React from 'react';
 
-function Form() {
-  const [value, setValue] = React.useState('');
+function Form({value, setValue, addWord}) {
   return (
     <form className="guess-input-wrapper" onSubmit={(event) => {
       event.preventDefault()
-      console.log('event', event)
       setValue('');
+      addWord(value);
     }}>
       <label htmlFor="guess-input">Enter guess:</label>
       <input pattern="[a-zA-Z]{5}" title="5 letter word" id="guess-input" type="text" value={value} onChange={(event) => {
