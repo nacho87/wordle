@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Form from '../Form'
 import { sample } from '../../utils';
 import { WORDS } from '../../data';
 
@@ -9,7 +9,10 @@ const answer = sample(WORDS);
 console.info({ answer });
 
 function Game() {
-  return <>Put a game here!</>;
+  return <>
+    <>Put a game here!</>;
+    <Form answer={answer}/>
+  </>
 }
 
 export default Game;
