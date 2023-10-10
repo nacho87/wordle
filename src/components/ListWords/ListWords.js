@@ -1,13 +1,17 @@
 import React from 'react';
+import {range} from '../../utils'
+import {NUM_OF_GUESSES_ALLOWED} from '../../constants'
+import Guess from '../Guess'
+
+
+const qtyOfWords = range(0, NUM_OF_GUESSES_ALLOWED);
 
 function ListWords({listWords}) {
 
   return (
     <div className="guess-results">
-      {listWords.length > 0 && listWords.map((word, index) => {
-        return(
-          <p key={index} className="guess">{word}</p>
-        )
+      {qtyOfWords.map((value) => {
+        return <Guess key={value} word={listWords[value]}/>
       })}
     </div>
   );
