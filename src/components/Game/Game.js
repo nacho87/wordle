@@ -21,7 +21,7 @@ function Game() {
 
   return <>
     <>Put a game here!</>;
-    <ListWords value={value} listWords={listWords}/>
+    <ListWords value={value} listWords={listWords} answer={answer}/>
     <Form answer={answer} value={value} setValue={setValue} addWord={addWord}/>
   </>
 }
